@@ -5,11 +5,11 @@ _dir=~/Desktop/scripts/dotfiles
 _now=$(date +"%m_%d_%Y")
 
 # sync dotfiles
-rsync -v ~/.vimrc $_dir.vimrc
-rsync -v ~/.zshrc $_dir.zshrc
-rsync -v ~/.bashrc $_dir.bashrc
-rsync -v ~/.jitsuconf $_dir.gitconfig
-rsync -v ~/.jitsuconf $_dir.jitsuconf
+rsync -v ~/.vimrc $_dir/.vimrc
+rsync -v ~/.zshrc $_dir/.zshrc
+rsync -v ~/.bashrc $_dir/.bashrc
+rsync -v ~/.jitsuconf $_dir/.gitconfig
+rsync -v ~/.jitsuconf $_dir/.jitsuconf
 
 # navigate to this directory
 cd $_dir
