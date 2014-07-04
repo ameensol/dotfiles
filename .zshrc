@@ -10,8 +10,17 @@ ZSH_THEME="robbyrussell"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# navigation
 alias f="cd ~/Desktop/filter"
 alias s="cd ~/Desktop/scripts"
+
+# Sync dotfiles
+alias .sync="bash ~/Desktop/scripts/dotfiles/sync.sh"
+
+# clipboard help
+alias "c=xclip"
+alias "v=xclip -o"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"

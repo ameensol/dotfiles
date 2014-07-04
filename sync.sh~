@@ -1,12 +1,18 @@
+# directory
+_dir=~/Desktop/scripts/dotfiles
+
 # what time is it?
 _now=$(date +"%m_%d_%Y")
 
 # sync dotfiles
-rsync -v ~/.vimrc ~/Desktop/scripts/dotfiles/.vimrc
-rsync -v ~/.zshrc ~/Desktop/scripts/dotfiles/.zshrc
-rsync -v ~/.bashrc ~/Desktop/scripts/dotfiles/.bashrc
-rsync -v ~/.jitsuconf ~/Desktop/scripts/dotfiles/.gitconfig
-rsync -v ~/.jitsuconf ~/Desktop/scripts/dotfiles/.jitsuconf
+rsync -v ~/.vimrc $_dir.vimrc
+rsync -v ~/.zshrc $_dir.zshrc
+rsync -v ~/.bashrc $_dir.bashrc
+rsync -v ~/.jitsuconf $_dir.gitconfig
+rsync -v ~/.jitsuconf $_dir.jitsuconf
+
+# navigate to this directory
+cd $_dir
 
 # add, commit, push
 git add --all
