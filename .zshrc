@@ -11,6 +11,7 @@ ZSH_THEME="robbyrussell"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias f="cd ~/Desktop/filter"
+alias s="cd ~/Desktop/scripts"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"

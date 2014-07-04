@@ -15,16 +15,55 @@ endif
 " }}}
 " Bundles ---------------------------------------------------------------- {{{
 
-" Turn off vi compatibility.
-set nocompatible
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-" Turning filetype off is necessary to load ftdetect files.
-filetype off
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" Install Vundle for bundles to work:
-"     git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+
+" plugin from http://vim-scripts.org/vim/scripts.html
+Plugin 'L9'
+
+" Git plugin not hosted on GitHub
+Plugin 'git://git.wincent.com/command-t.git'
+
+" git repos on your local machine (i.e. when working on your own plugin)
+Plugin 'file:///home/gmarik/path/to/plugin'
+
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+
+" Avoid a name conflict with L9
+Plugin 'user/L9', {'name': 'newL9'}
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList          - list configured plugins
+" :PluginInstall(!)    - install (update) plugins
+" :PluginSearch(!) foo - search (or refresh cache first) for foo
+" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
 " General ---------------------------------------------------------------- {{{
 
@@ -163,8 +202,8 @@ Bundle 'vim-scripts/matchit.zip'
 " Git syntax highlighting.
 Bundle 'tpope/vim-git'
 
-" Git integration.
-Bundle 'tpope/vim-fugitive'
+" Git integration. [Included in header]
+" Bundle 'tpope/vim-fugitive'
 
 " Git commit browser.
 Bundle 'int3/vim-extradite'
@@ -206,7 +245,7 @@ Bundle 'pangloss/vim-javascript'
 " Bundle 'vim-scripts/jQuery'
 
 " CoffeeScript language.
-Bundle 'kchmck/vim-coffee-script'
+" Bundle 'kchmck/vim-coffee-script'
 
 " }}}
 " Ruby/Rails ------------------------------------------------------------- {{{
@@ -567,8 +606,10 @@ if &term =~ 'xterm'
     set restorescreen
 
     " Terminal in 'termcap' mode.
-    nal out of 'termcap mode.
-    set t_te=met t_tiursor Shape ----------------------------------------------------------- {{{
+    " Set Terminal out of 'termcap mode.
+    set t_te=met 
+
+" t_tiursor Shape ----------------------------------------------------------- {{{
 
     " Tmux will only forward escape sequences to the terminal if surrounded by
     " a DCS sequence (http://bit.ly/zImrzb).
@@ -655,10 +696,10 @@ set selection=old
 " Expand tabs into spaces.
 set expandtab
 
-" Set tab to equal 2 spaces.
+" Set tab to equal 4 spaces.
 set tabstop=2
 
-" Set soft tabs equal to 2 spaces.
+" Set soft tabs equal to 4 spaces.
 set softtabstop=2
 
 " Set auto indent spacing.
