@@ -1,0 +1,11 @@
+{
+  "userconfig": "/home/ameen/.jitsuconf",
+  "directories": {},
+  "rejectUnauthorized": false,
+  "headers": {
+    "user-agent": "jitsu/0.13.18"
+  },
+  "username": "ameensol",
+  "apiToken": "28a827ad-69fd-4ae4-b81b-a6c6890ac7d4",
+  "apiTokenName": "jitsu"
+}
