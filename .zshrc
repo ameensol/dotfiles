@@ -12,16 +12,16 @@ ZSH_THEME="robbyrussell"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # navigation
-alias f="cd ~/Desktop/filter"
-alias s="cd ~/Desktop/scripts"
-alias d="cd ~/Desktop/scripts/dotfiles"
+#alias f="cd ~/Desktop/filter"
+#alias s="cd ~/Desktop/scripts"
+#alias d="cd ~/Desktop/scripts/dotfiles"
 
 # Sync dotfiles
-alias .sync="bash ~/Desktop/scripts/dotfiles/sync.sh"
+#alias .sync="bash ~/Desktop/scripts/dotfiles/sync.sh"
 
 # clipboard help
-alias "c=xclip"
-alias "v=xclip -o"
+#alias c="xclip"
+#alias v="xclip -o"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
