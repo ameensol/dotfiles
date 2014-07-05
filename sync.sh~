@@ -10,6 +10,7 @@ rsync -v ~/.zshrc $_dir/.zshrc
 rsync -v ~/.bashrc $_dir/.bashrc
 rsync -v ~/.jitsuconf $_dir/.gitconfig
 rsync -v ~/.jitsuconf $_dir/.jitsuconf
+rsync -v ~/.xbindkeys $_dir/.xbindkeys
 
 # navigate to this directory
 cd $_dir

@@ -14,6 +14,7 @@ ZSH_THEME="robbyrussell"
 # navigation
 alias f="cd ~/Desktop/filter"
 alias s="cd ~/Desktop/scripts"
+alias d="cd ~/Desktop/scripts/dotfiles"
 
 # Sync dotfiles
 alias .sync="bash ~/Desktop/scripts/dotfiles/sync.sh"
