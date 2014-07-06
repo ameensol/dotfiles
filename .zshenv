@@ -4,6 +4,7 @@
 
 # navigation
 alias f="cd ~/Desktop/filter"
+alias fb="cd ~/Desktop/filter/fb-filter"
 alias s="cd ~/Desktop/scripts"
 alias d="cd ~/Desktop/scripts/dotfiles"
 
