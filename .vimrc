@@ -49,6 +49,9 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Avoid a name conflict with L9
 Plugin 'user/L9', {'name': 'newL9'}
 
+" YouCompleteMe autocomplete
+" Plugin 'Valloric/YouCompleteMe'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -218,7 +221,7 @@ Bundle 'sjl/splice.vim'
 " Web Development -------------------------------------------------------- {{{
 
 " Expands condensed HTML.
-Bundle 'mattn/zencoding-vim'
+" Bundle 'mattn/zencoding-vim'
 
 " Translates markup languages into HTML for previewing.
 Bundle 'matthias-guenther/hammer.vim'
@@ -234,6 +237,9 @@ Bundle 'https://github.com/ChrisYip/Better-CSS-Syntax-for-Vim.git'
 
 " LESS (dynamic CSS) language.
 " Bundle 'groenewege/vim-less'
+
+" Javascript syntax
+" Bundle 'jelera/vim-javascript-syntax'
 
 " JavaScript language.
 Bundle 'pangloss/vim-javascript'
@@ -473,37 +479,7 @@ filetype indent on
 filetype plugin indent on
 
 " Color Scheme ----------------------------------------------------------- {{{
-
-" Set the color scheme.
-try
-    if match($TERM_PROGRAM, 'Apple_Terminal') != -1
-        let term_bg_rgb = split(system("osascript -e 'tell application \"Terminal\" to get background color of current settings of selected tab of front window'"), ', ')
-    elseif match($TERM_PROGRAM, 'iTerm') != -1
-        let term_bg_rgb = split(system("osascript -e 'tell application \"iTerm\" to get background color of current session of current terminal'"), ', ')
-    endif
-
-    " Calculate luminance.
-    " Y = 0.2126 * R + 0.7152 * G + 0.0722 * B
-    " http://en.wikipedia.org/wiki/Luminance_(relative)
-    let coefficients = [0.2126, 0.7152, 0.0722]
-    let luminance = 0
-
-    for i in range(3)
-        let luminance += coefficients[i] * term_bg_rgb[i]
-    endfor
-
-    " Use a dark theme if luminance is less than 30%.
-    if luminance < (65535 * 0.3)
-	set background=dark
-        colorscheme solarized
-    else
-        set background=light
-        colorscheme solarized
-    endif
-catch
-    echo 'Error: Could not set prefered color scheme'
-    colorscheme default
-endtry
+colorscheme hybrid
 
 " }}}
 " Graphical Interface ---------------------------------------------------- {{{
@@ -607,7 +583,7 @@ if &term =~ 'xterm'
 
     " Terminal in 'termcap' mode.
     " Set Terminal out of 'termcap mode.
-    set t_te=met 
+    set t_te=met
 
 " t_tiursor Shape ----------------------------------------------------------- {{{
 
@@ -696,10 +672,10 @@ set selection=old
 " Expand tabs into spaces.
 set expandtab
 
-" Set tab to equal 4 spaces.
+" Set tab to equal 2 spaces.
 set tabstop=2
 
-" Set soft tabs equal to 4 spaces.
+" Set soft tabs equal to 2 spaces.
 set softtabstop=2
 
 " Set auto indent spacing.
@@ -938,8 +914,8 @@ aug ft_git
     au!
     au FileType git* setlocal
         \ noexpandtab
-        \ tabstop=4
-        \ shiftwidth=4
+        \ tabstop=2
+        \ shiftwidth=2
         \ nofoldenable
         \ textwidth=72
 
@@ -1770,3 +1746,5 @@ silent! vnoremap <F2> :BackgroundToggle<CR>
 
 " }}}
 
+let g:hybrid_use_Xresources = 1
+colorscheme hybrid
